@@ -26,5 +26,44 @@
     Calcule e mostre o valor total do investimento após o terceiro ano. Pergunte ao usuário se ele deseja saber quanto foi pago de imposto no decorrer do tempo em que manteve o investimento. Caso o usuário responda positivamente, mostre o valor total pago de imposto. Pergunte, também, se o usuário deseja saber o percentual pago de imposto e apresente este valor. Caso o usuário responda positivamente, mostre o percentual pago de imposto. Faça uma relação sobre o imposto pago e o rendimento obtido e aponte se o investimento foi vantajoso ou não e qual a diferença entre os dois.
     */
 
+    const dinheiroguardado = Number(prompt('informe quanto dinheiro possui guardado embaixo do colchão?'))
+
+    let tipoinvestimento = prompt('informe qual tipo de investimento deseja realizar-("poupança", "renda fixa", "fundos imobiliarios", "ações")')
     
+    if (tipoinvestimento !== 'poupança' && tipoinvestimento !== 'renda fixa' && tipoinvestimento !== 'fundos imobiliarios' && tipoinvestimento !== 'ações') {
+        alert('tente novamente (2 tentativas restantes)')
+
+        let tipoinvestimento = prompt('informe qual tipo de investimento deseja realizar-("poupança", "renda fixa", "fundos imobiliarios", "ações")')
+
+        if (tipoinvestimento !== 'poupança' && tipoinvestimento !== 'renda fixa' && tipoinvestimento !== 'fundos imobiliarios' && tipoinvestimento !== 'ações') {
+
+            alert('tente novamente (1 tentiva restante)')
+
+            let tipoinvestimento = prompt('informe qual tipo de investimento deseja realizar-("poupança", "renda fixa", "fundos imobiliarios", "ações")')
+
+            if (tipoinvestimento !== 'poupança' && tipoinvestimento !== 'renda fixa' && tipoinvestimento !== 'fundos imobiliarios' && tipoinvestimento !== 'ações') {
+
+                alert('voce excedeu os limites de tentativas, programa encerrado')
+            }
+        }
+        
+    }
+
+    const poupança= dinheiroguardado * 1.03
+    const rendaF= dinheiroguardado * 1.05
+    const fundos = dinheiroguardado * 1.07
+    const acoes = dinheiroguardado * 1.10
+
+    if(tipoinvestimento == 'poupança'){
+        alert(`seu investimento após 1 ano é de R$ ${poupança}`)
+    }
+    else if(tipoinvestimento == 'renda fixa'){
+        alert(`seu investimento após 1 ano é de R$ ${rendaF}`)
+    }
+    else if(tipoinvestimento == 'fundos imobiliarios'){
+        alert(`seu investimento após 1 ano é de R$ ${fundos}`)
+    }
+    else if(tipoinvestimento == 'ações'){
+        alert(`seu investimento apóis 1 ano é de R$ ${acoes}`)
+    }
 </script>
